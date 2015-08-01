@@ -3,8 +3,10 @@ using System.Collections;
 
 public class Wall : MonoBehaviour {
 
-	public int xcoord;
-	public int pose;
+	Vector3 velocity = Vector3.zero;
+	public Vector3 speed;
+	public float maxSpeed;
+
 	// Use this for initialization
 	void Start () {
 
@@ -16,8 +18,10 @@ public class Wall : MonoBehaviour {
 		// do updates in GameController
 	}
 
-	public void MoveWall(){
-		// johnnie said push....
+	void FixedUpdate(){
+		velocity += speed * Time.deltaTime;
 
+		velocity = Vector3.ClampMagnitude (velocity, maxSpeed);
+		transform.position += velocity * Time.deltaTime;
 	}
 }
