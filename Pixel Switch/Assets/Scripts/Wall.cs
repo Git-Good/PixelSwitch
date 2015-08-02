@@ -6,22 +6,34 @@ public class Wall : MonoBehaviour {
 	Vector3 velocity = Vector3.zero;
 	public Vector3 speed;
 	public float maxSpeed;
+	public int poseWall;
 
-	// Use this for initialization
-	void Start () {
+	bool lose = false;
 
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		// do updates in GameController
+	void Start(){
+
 	}
 
 	void FixedUpdate(){
-		velocity += speed * Time.deltaTime;
+		if (!lose) {
+			velocity += speed * Time.deltaTime;
 
-		velocity = Vector3.ClampMagnitude (velocity, maxSpeed);
-		transform.position += velocity * Time.deltaTime;
+			velocity = Vector3.ClampMagnitude (velocity, maxSpeed);
+			transform.position += velocity * Time.deltaTime;
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D collider){
+		if (collider.tag == "Player") {
+			GameController gc = GameObject.FindObjectOfType<GameController>();
+			if (gc.poseNum != poseWall){
+				Debug.Log ("Lose");
+				lose = true;
+			}
+		}
+
+		if (collider.tag == "Destroy") {
+			Destroy (gameObject);
+		}
 	}
 }
