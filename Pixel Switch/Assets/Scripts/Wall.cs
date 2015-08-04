@@ -17,7 +17,6 @@ public class Wall : MonoBehaviour {
 	void FixedUpdate(){
 		if (!lose) {
 			velocity += speed * Time.deltaTime;
-
 			velocity = Vector3.ClampMagnitude (velocity, maxSpeed);
 			transform.position += velocity * Time.deltaTime;
 		}

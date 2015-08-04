@@ -30,7 +30,6 @@ public class GameController : MonoBehaviour {
 
 	public void PoseOne() {
 		poseNum = 1;
-
 	}
 
 	public void PoseTwo(){
