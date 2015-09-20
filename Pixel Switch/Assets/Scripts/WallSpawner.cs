@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class WallSpawner : MonoBehaviour {
-
+	
 	public GameObject[] wallList;
 
 	// Use this for initialization
-	void Start () {
+	void Start() {
 		SpawnNewWall ();
 	}
 	

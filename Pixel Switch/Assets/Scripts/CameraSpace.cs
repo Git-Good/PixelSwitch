@@ -11,10 +11,10 @@ public class CameraSpace : MonoBehaviour {
 
 		GameObject playerGO = GameObject.FindGameObjectWithTag ("Player");
 
-		if (playerGO == null) {
+		//if (playerGO == null) {
 			// Do nothing
-			return;
-		}
+		//	return;
+		//}
 
 		player = playerGO.transform;
 		offsetX = transform.position.x - player.position.x;

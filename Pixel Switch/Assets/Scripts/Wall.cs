@@ -7,12 +7,8 @@ public class Wall : MonoBehaviour {
 	public Vector3 speed;
 	public float maxSpeed;
 	public int poseWall;
-
+	
 	bool lose = false;
-
-	void Start(){
-
-	}
 
 	void FixedUpdate(){
 		if (!lose) {
@@ -22,15 +18,11 @@ public class Wall : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D collider){
-		if (collider.tag == "Player") {
-			GameController gc = GameObject.FindObjectOfType<GameController>();
-			if (gc.poseNum != poseWall){
-				Debug.Log ("Lose");
-				lose = true;
-			}
-		}
+	public void LostGame() {
+		lose = true;
+	}
 
+	void OnTriggerEnter2D(Collider2D collider){
 		if (collider.tag == "Destroy") {
 			Destroy (gameObject);
 		}
