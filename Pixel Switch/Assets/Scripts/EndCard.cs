@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using GooglePlayGames;
+using UnityEngine.SocialPlatforms;
 
 public class EndCard : MonoBehaviour {
 
@@ -12,6 +14,8 @@ public class EndCard : MonoBehaviour {
 	public GameObject TScoreU;
 
 	bool showEndCard = false;
+
+	private int HScore;
 	
 	// Use this for initialization
 	void Start () {
@@ -32,6 +36,10 @@ public class EndCard : MonoBehaviour {
 			ScoreHundreds.SetActive (false);
 			HScoreU.SetActive(true);
 			TScoreU.SetActive(true);
+
+			if (Input.GetKeyDown (KeyCode.Escape)) {
+				Application.LoadLevel("MainMenu");
+			}
 		}
 	}
 

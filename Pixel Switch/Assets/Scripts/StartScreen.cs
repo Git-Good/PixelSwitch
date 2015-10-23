@@ -13,6 +13,8 @@ public class StartScreen : MonoBehaviour {
 
 	bool tapped = false;
 
+
+
 	// Use this for initialization
 	void Start () {
 		UI.SetActive (false);
@@ -21,11 +23,20 @@ public class StartScreen : MonoBehaviour {
 	}
 	
 	void Update () {
+		if (Time.timeScale == 0 && tapped == false) {
+			if (Input.GetKeyDown (KeyCode.Escape)) {
+				Application.LoadLevel("Character Select");
+			}
+		}
 		if (Time.timeScale == 0 && tapped == true) {
 			Time.timeScale = 1;
 			UI.SetActive(true);
 			ScoreUnits.SetActive (true);
 			StartInfo.SetActive (false);
+			GameController gcontrol = GameObject.FindObjectOfType<GameController>();
+			gcontrol.MapButtons();
+			ButtonImage bImage = GameObject.FindObjectOfType<ButtonImage>();
+			bImage.ButtonImageChange();
 			GetComponent<SpriteRenderer>().enabled = false;
 		}
 	}

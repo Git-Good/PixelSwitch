@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameController : MonoBehaviour {
 
+	public static GameController Instance;
+
 	public int poseNum = 0;
-	public GameObject EndCard;
 	public AudioClip thudSound;
 	public AudioClip successSound;
 	public AudioClip switchSound;
+
+	GameObject button1, button2, button3, button4;
 
 	AudioSource thud;
 	AudioSource success;
@@ -15,6 +19,8 @@ public class GameController : MonoBehaviour {
 
 
 	void Awake() {
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
+		Instance = this;
 		success = GetComponent<AudioSource> ();
 		thud = GetComponent<AudioSource> ();
 		switchEffect = GetComponent<AudioSource> ();
@@ -22,6 +28,29 @@ public class GameController : MonoBehaviour {
 
 	void Start() {
 		success.clip = successSound;
+	}
+
+	public void MapButtons(){
+		button1 = GameObject.Find ("Pose1");
+		button2 = GameObject.Find ("Pose2");
+		button3 = GameObject.Find ("Pose3");
+		button4 = GameObject.Find ("Pose4");
+		
+		UnityEngine.Events.UnityAction Pose1 = () => {
+			this.PoseOne();};
+		button1.GetComponent<Button> ().onClick.AddListener (Pose1);
+		
+		UnityEngine.Events.UnityAction Pose2 = () => {
+			this.PoseTwo();};
+		button2.GetComponent<Button> ().onClick.AddListener (Pose2);
+		
+		UnityEngine.Events.UnityAction Pose3 = () => {
+			this.PoseThree();};
+		button3.GetComponent<Button> ().onClick.AddListener (Pose3);
+		
+		UnityEngine.Events.UnityAction Pose4 = () => {
+			this.PoseFour();};
+		button4.GetComponent<Button> ().onClick.AddListener (Pose4);
 	}
 
 	public void PoseOne() {
@@ -59,11 +88,12 @@ public class GameController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider){
 		if (collider.tag == "Wall") {
 			Wall wall = GameObject.FindObjectOfType<Wall> ();
+			ShowEnd showEnd = GameObject.FindObjectOfType<ShowEnd>();
 			if (wall.poseWall != poseNum) {
 				thud.PlayOneShot(thudSound);
 				GetComponent<Animator>().SetTrigger ("Lose");
 				wall.LostGame();
-				StartCoroutine (DelayActive(1f));
+				showEnd.Show();
 			}
 			else {
 				if (!success.isPlaying){
@@ -71,10 +101,5 @@ public class GameController : MonoBehaviour {
 				}
 			}
 		}
-	}
-
-	private IEnumerator DelayActive (float duration) {
-		yield return new WaitForSeconds(duration);
-		EndCard.SetActive (true);
 	}
 }

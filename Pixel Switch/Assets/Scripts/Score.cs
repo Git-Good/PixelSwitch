@@ -22,7 +22,7 @@ public class Score : MonoBehaviour {
 
 	void Start (){
 		score = 0;
-		PlayerPrefs.DeleteAll ();
+		//PlayerPrefs.DeleteAll ();
 		(Tens.gameObject as GameObject).SetActive(false);
 		(Hundreds.gameObject as GameObject).SetActive(false);
 		highScore = PlayerPrefs.GetInt ("HighScore");
@@ -55,11 +55,8 @@ public class Score : MonoBehaviour {
 			PlayerPrefs.SetInt("HighScore", highScore);
 			Score.Instance.newScore = true;
 		}
-		if (score > 5) {
-			Time.timeScale += 3f * Time.deltaTime;
-		}
-		if (score > 25) {
-			Time.timeScale += 5f * Time.deltaTime;
+		if (score > 3) {
+			Time.timeScale += 2f * Time.deltaTime;
 		}
 	}
 	
