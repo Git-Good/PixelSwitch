@@ -97,7 +97,7 @@ public class GameController : MonoBehaviour {
 			}
 			else {
 				if (!success.isPlaying){
-					success.Play ();
+					success.PlayOneShot (successSound);
 				}
 			}
 		}

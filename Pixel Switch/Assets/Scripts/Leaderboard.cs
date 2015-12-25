@@ -6,7 +6,7 @@ using UnityEngine.SocialPlatforms;
 
 public class Leaderboard : MonoBehaviour {
 
-	void Awake() {
+	public void ShowBoard() {
 		PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder ()
 			.Build ();
 		GooglePlayGames.PlayGamesPlatform.InitializeInstance (config);

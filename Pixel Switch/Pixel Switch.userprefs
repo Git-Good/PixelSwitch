@@ -1,14 +1,27 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PostScore.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GooglePlayGames\BasicApi\DummyClient.cs">
     <Files>
-      <File FileName="Assets\Scripts\EndCard.cs" Line="36" Column="3" />
+      <File FileName="Assets\GooglePlayGames\BasicApi\DummyClient.cs" Line="25" Column="49" />
+      <File FileName="Assets\Scripts\PlayerList.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EndCard.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\StartScreen.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Score.cs" Line="49" Column="3" />
-      <File FileName="Assets\Scripts\GameController.cs" Line="51" Column="25" />
-      <File FileName="Assets\Scripts\PostScore.cs" Line="14" Column="4" />
-      <File FileName="Assets\Scripts\ScorePoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PostScore.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Score.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RandomChar.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerSpawn.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Wall.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ShowEnd.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Selector.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ButtonImage.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\WallSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Leaderboard.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ShowLeaderboard.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BGM.cs" Line="1" Column="1" />
+      <File FileName="Assets\GooglePlayGames\ISocialPlatform\PlayGamesPlatform.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

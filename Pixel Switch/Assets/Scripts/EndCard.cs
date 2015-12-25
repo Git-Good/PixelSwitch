@@ -2,6 +2,7 @@
 using System.Collections;
 using GooglePlayGames;
 using UnityEngine.SocialPlatforms;
+using UnityEngine.SceneManagement;
 
 public class EndCard : MonoBehaviour {
 
@@ -19,9 +20,9 @@ public class EndCard : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		Time.timeScale = 1;
 		StartUI.SetActive (false);
 		UI.SetActive (false);
-		//Time.timeScale = 0;
 		showEndCard = true;
 		Score.Instance.ShowHighScore();
 		Score.Instance.ShowTempScore();
@@ -38,16 +39,16 @@ public class EndCard : MonoBehaviour {
 			TScoreU.SetActive(true);
 
 			if (Input.GetKeyDown (KeyCode.Escape)) {
-				Application.LoadLevel("MainMenu");
+				SceneManager.LoadScene("MainMenu");
 			}
 		}
 	}
 
 	public void Tapped () {
-		Application.LoadLevel ("PixelSwitch");
+        SceneManager.LoadScene("PixelSwitch");
 	}
 
 	public void CharSel() {
-		Application.LoadLevel ("Character Select");
+        SceneManager.LoadScene("Character Select");
 	}
 }

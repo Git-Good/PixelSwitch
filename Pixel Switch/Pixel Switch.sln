@@ -1,11 +1,11 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{587707E7-439C-038C-DA64-9D0066BCD7D2}") = "Pixel Switch", "Assembly-CSharp-firstpass.csproj", "{2FBA5FD9-03D6-B4E3-5B4B-F11841477699}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixel Switch.CSharp.Plugins", "Pixel Switch.CSharp.Plugins.csproj", "{048FD3C8-B4D3-B39A-0C7D-C48E7F737D77}"
 EndProject
-Project("{587707E7-439C-038C-DA64-9D0066BCD7D2}") = "Pixel Switch", "Assembly-CSharp.csproj", "{8E546BA6-BFF2-D46B-3330-3F699771055D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixel Switch.CSharp", "Pixel Switch.CSharp.csproj", "{DC1B8A33-A2AD-8256-3A13-B9C23AD8905E}"
 EndProject
-Project("{587707E7-439C-038C-DA64-9D0066BCD7D2}") = "Pixel Switch", "Assembly-CSharp-Editor.csproj", "{82C14427-EEA5-81F5-4E29-9199071087A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixel Switch.CSharp.Editor", "Pixel Switch.CSharp.Editor.csproj", "{9A908B76-029E-6967-C004-DD10CCABF494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,40 +13,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2FBA5FD9-03D6-B4E3-5B4B-F11841477699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2FBA5FD9-03D6-B4E3-5B4B-F11841477699}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2FBA5FD9-03D6-B4E3-5B4B-F11841477699}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2FBA5FD9-03D6-B4E3-5B4B-F11841477699}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E546BA6-BFF2-D46B-3330-3F699771055D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E546BA6-BFF2-D46B-3330-3F699771055D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E546BA6-BFF2-D46B-3330-3F699771055D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E546BA6-BFF2-D46B-3330-3F699771055D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{82C14427-EEA5-81F5-4E29-9199071087A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82C14427-EEA5-81F5-4E29-9199071087A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82C14427-EEA5-81F5-4E29-9199071087A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82C14427-EEA5-81F5-4E29-9199071087A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{048FD3C8-B4D3-B39A-0C7D-C48E7F737D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048FD3C8-B4D3-B39A-0C7D-C48E7F737D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048FD3C8-B4D3-B39A-0C7D-C48E7F737D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048FD3C8-B4D3-B39A-0C7D-C48E7F737D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1B8A33-A2AD-8256-3A13-B9C23AD8905E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1B8A33-A2AD-8256-3A13-B9C23AD8905E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1B8A33-A2AD-8256-3A13-B9C23AD8905E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC1B8A33-A2AD-8256-3A13-B9C23AD8905E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A908B76-029E-6967-C004-DD10CCABF494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A908B76-029E-6967-C004-DD10CCABF494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A908B76-029E-6967-C004-DD10CCABF494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A908B76-029E-6967-C004-DD10CCABF494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																								GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
-		Policies = $0
-		$0.TextStylePolicy = $1
-		$1.inheritsSet = null
-		$1.scope = text/x-csharp
-		$0.CSharpFormattingPolicy = $2
-		$2.inheritsSet = Mono
-		$2.inheritsScope = text/x-csharp
-		$2.scope = text/x-csharp
-		$0.TextStylePolicy = $3
-		$3.FileWidth = 120
-		$3.TabWidth = 4
-		$3.IndentWidth = 4
-		$3.EolMarker = Unix
-		$3.inheritsSet = Mono
-		$3.inheritsScope = text/plain
-		$3.scope = text/plain
-	EndGlobalSection
-
 EndGlobal

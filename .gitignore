@@ -1,24 +1,33 @@
 # =============== #
 # Unity generated #
 # =============== #
-[Tt]emp/
-[Oo]bj/
-[Bb]uild
-[Ll]ibrary/
-sysinfo.txt
+\[Ll]ibrary\
+\[Tt]emp\
+\[Oo]bj\
+/[Bb]uild/
+/[Bb]uilds/
+/Assets/AssetStoreTools*
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-[Ee]xported[Oo]bj/
-/*.userprefs
-/*.csproj
-/*.pidb
-/*.suo
-/*.sln*
-/*.user
-/*.unityproj
-/*.booproj
+ExportedObj/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Unity3D generated meta files
+*.pidb.meta
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
  
 # ============ #
 # OS generated #
@@ -30,3 +39,5 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 [Tt]humbs.db
+
+

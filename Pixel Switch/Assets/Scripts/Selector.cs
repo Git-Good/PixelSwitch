@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Selector : MonoBehaviour {
 	
@@ -19,9 +20,11 @@ public class Selector : MonoBehaviour {
 		Players.Clear ();
 		Players.Add (playerList.players[0]);
 		Players.Add (playerList.players[1]);
-		
-		// if GOLocation spot is not declare, will use our own transform instead.
-		if (GOLocationSpot== null){
+		Players.Add (playerList.players[2]);
+        Players.Add (playerList.players[3]);
+
+        // if GOLocation spot is not declare, will use our own transform instead.
+        if (GOLocationSpot== null){
 			GOLocationSpot = transform;
 		}
 		// start by hiding all
@@ -43,7 +46,7 @@ public class Selector : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			Application.LoadLevel ("MainMenu");
+            SceneManager.LoadScene("MainMenu");
 		}
 	}
 	
@@ -78,7 +81,7 @@ public class Selector : MonoBehaviour {
 	public void SelectCharacter(){
 		// Save player choice and move to game scene
 		PlayerPrefs.SetString("Player", Players[_currentID].playerName);
-		//Debug.Log("Selected: " + PlayerPrefs.GetString("Player"));
-		Application.LoadLevel ("PixelSwitch");
+        //Debug.Log("Selected: " + PlayerPrefs.GetString("Player"));
+        SceneManager.LoadScene("PixelSwitch");
 	}
 }
