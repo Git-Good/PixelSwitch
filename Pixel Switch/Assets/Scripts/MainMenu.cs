@@ -18,8 +18,4 @@ public class MainMenu : MonoBehaviour {
 	public void StartButton(){
         SceneManager.LoadScene("Character Select");
 	}
-
-	public void StartGame(){
-        SceneManager.LoadScene("PixelSwitch");
-	}
 }

@@ -18,10 +18,10 @@ public class Selector : MonoBehaviour {
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 		playerList = GameObject.FindGameObjectWithTag ("Player List").GetComponent<PlayerList> ();
 		Players.Clear ();
-		Players.Add (playerList.players[0]);
-		Players.Add (playerList.players[1]);
-		Players.Add (playerList.players[2]);
-        Players.Add (playerList.players[3]);
+        for (int j = 0; j < GOList.Length; j++)
+        {
+            Players.Add(playerList.players[j]);
+        }
 
         // if GOLocation spot is not declare, will use our own transform instead.
         if (GOLocationSpot== null){
