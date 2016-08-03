@@ -1,50 +1,49 @@
 ﻿using UnityEngine;
 using System.Collections;
-using GooglePlayGames;
-using UnityEngine.SocialPlatforms;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class EndCard : MonoBehaviour {
 
 	public GameObject UI;
 	public GameObject StartUI;
-	public GameObject ScoreUnits;
-	public GameObject ScoreTens;
-	public GameObject ScoreHundreds;
-	public GameObject HScoreU;
-	public GameObject TScoreU;
+    public GameObject currScore;
+    public GameObject endScore;
+    public GameObject highScoreObj;
+    Text endScoreText, highScoreText;
 
-	bool showEndCard = false;
+    bool showEndCard = false;
 
-	private int HScore;
-	
-	// Use this for initialization
-	void Start () {
+    private int EScore;
+    private int highScore;
+
+    // Use this for initialization
+    void Start () {
 		Time.timeScale = 1;
 		StartUI.SetActive (false);
 		UI.SetActive (false);
+        EScore = Score.score;
+        currScore.SetActive(false);
+        endScore.SetActive(true);
+        highScoreObj.SetActive(true);
 		showEndCard = true;
-		Score.Instance.ShowHighScore();
-		Score.Instance.ShowTempScore();
-		Score.Instance.ShowNEW();
-	}
+        endScoreText = endScore.GetComponentInChildren<Text>();
+        highScoreText = highScoreObj.GetComponentInChildren<Text>();
+        highScore = PlayerPrefs.GetInt("HighScore");
+    }
 
 	void Update () {
 		if (showEndCard) {
 			GetComponent<Animator>().SetBool("IsDisplayed", true);
-			ScoreUnits.SetActive (false);
-			ScoreTens.SetActive (false);
-			ScoreHundreds.SetActive (false);
-			HScoreU.SetActive(true);
-			TScoreU.SetActive(true);
-
-			if (Input.GetKeyDown (KeyCode.Escape)) {
+            endScoreText.text = "Score: " + EScore;
+            highScoreText.text = "Best: " + highScore;
+            if (Input.GetKeyDown (KeyCode.Escape)) {
 				SceneManager.LoadScene("MainMenu");
 			}
 		}
 	}
 
-	public void Tapped () {
+    public void Tapped () {
         SceneManager.LoadScene("PixelSwitch");
 	}
 

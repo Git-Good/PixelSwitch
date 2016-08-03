@@ -8,7 +8,6 @@ public class GameController : MonoBehaviour {
 
 	public int poseNum = 0;
 	public AudioClip thudSound;
-	public AudioClip successSound;
 	public AudioClip switchSound;
 
 	GameObject button1, button2, button3, button4;
@@ -21,13 +20,8 @@ public class GameController : MonoBehaviour {
 	void Awake() {
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 		Instance = this;
-		success = GetComponent<AudioSource> ();
 		thud = GetComponent<AudioSource> ();
 		switchEffect = GetComponent<AudioSource> ();
-	}
-
-	void Start() {
-		success.clip = successSound;
 	}
 
 	public void MapButtons(){
@@ -54,27 +48,27 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void PoseOne() {
-		ResetTriggers ();
-		GetComponent<Animator> ().SetTrigger ("Pose1");
-		poseNum = 1;
+        poseNum = 1;
+        ResetTriggers ();
+        GetComponent<Animator> ().SetTrigger ("Pose1");
 	}
 
 	public void PoseTwo(){
-		ResetTriggers ();
-		GetComponent<Animator> ().SetTrigger ("Pose2");
-		poseNum = 2;
+        poseNum = 2;
+        ResetTriggers ();
+        GetComponent<Animator> ().SetTrigger ("Pose2");
 	}
 
 	public void PoseThree(){
-		ResetTriggers ();
-		GetComponent<Animator> ().SetTrigger ("Pose3");
-		poseNum = 3;
+        poseNum = 3;
+        ResetTriggers ();
+        GetComponent<Animator> ().SetTrigger ("Pose3");
 	}
 
 	public void PoseFour(){
-		ResetTriggers ();
-		GetComponent<Animator> ().SetTrigger ("Pose4");
-		poseNum = 4;
+        poseNum = 4;
+        ResetTriggers ();
+        GetComponent<Animator> ().SetTrigger ("Pose4");
 	}
 
 	void ResetTriggers () {
@@ -94,11 +88,6 @@ public class GameController : MonoBehaviour {
 				GetComponent<Animator>().SetTrigger ("Lose");
 				wall.LostGame();
 				showEnd.Show();
-			}
-			else {
-				if (!success.isPlaying){
-					success.PlayOneShot (successSound);
-				}
 			}
 		}
 	}

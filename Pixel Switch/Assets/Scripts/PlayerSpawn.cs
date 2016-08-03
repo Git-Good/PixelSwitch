@@ -9,6 +9,11 @@ public class PlayerSpawn : MonoBehaviour {
 	}
 	
 	public void SpawnSelectedChar(){
-		Instantiate (Resources.Load ("Characters/" + PlayerPrefs.GetString("Player")), transform.position, Quaternion.identity);
+        if (PlayerPrefs.GetString("Player") == "")
+        {
+            // Spawn default if player has never chosen a cat before
+            PlayerPrefs.SetString("Player", "Pink");
+        }
+        Instantiate (Resources.Load ("Characters/" + PlayerPrefs.GetString("Player")), transform.position, Quaternion.identity);
 	}
 }

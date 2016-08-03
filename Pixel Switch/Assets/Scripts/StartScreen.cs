@@ -7,10 +7,8 @@ public class StartScreen : MonoBehaviour {
 	public static StartScreen Instance;
 
 	public GameObject UI;
-	public GameObject ScoreUnits;
-	public GameObject ScoreTens;
-	public GameObject ScoreHundreds;
 	public GameObject StartInfo;
+    public GameObject Score;
 
 	public bool tapped = false;
 
@@ -28,8 +26,8 @@ public class StartScreen : MonoBehaviour {
 			}
 		}
 		else {
+            Score.SetActive(true);
 			UI.SetActive(true);
-			ScoreUnits.SetActive (true);
 			StartInfo.SetActive (false);
 			GameController gcontrol = GameObject.FindObjectOfType<GameController>();
 			gcontrol.MapButtons();
